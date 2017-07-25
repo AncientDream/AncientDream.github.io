@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="-java -爬虫代码," />
+  <meta name="keywords" content="-java," />
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="package WORK;  import java.awt.BorderLayout; import java.awt.EventQueue; import java.awt.FileDialog;  import javax.swing.JFrame; import javax.swing.JPanel; import javax.swing.border.EmptyBorder; impor">
-<meta name="keywords" content="-java -爬虫代码">
+<meta name="description" content="package WORK; import java.awt.BorderLayout; import java.awt.EventQueue; import java.awt.FileDialog; import javax.swing.JFrame; import javax.swing.JPanel; import javax.swing.border.EmptyBorder; import">
+<meta name="keywords" content="-java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Frist">
+<meta property="og:title" content="获取网页源代码，保存图片">
 <meta property="og:url" content="http://yoursite.com/2017/07/25/Frist/index.html">
 <meta property="og:site_name" content="南岸青栀">
-<meta property="og:description" content="package WORK;  import java.awt.BorderLayout; import java.awt.EventQueue; import java.awt.FileDialog;  import javax.swing.JFrame; import javax.swing.JPanel; import javax.swing.border.EmptyBorder; impor">
+<meta property="og:description" content="package WORK; import java.awt.BorderLayout; import java.awt.EventQueue; import java.awt.FileDialog; import javax.swing.JFrame; import javax.swing.JPanel; import javax.swing.border.EmptyBorder; import">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-25T10:53:29.530Z">
+<meta property="og:updated_time" content="2017-07-25T11:28:47.592Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Frist">
-<meta name="twitter:description" content="package WORK;  import java.awt.BorderLayout; import java.awt.EventQueue; import java.awt.FileDialog;  import javax.swing.JFrame; import javax.swing.JPanel; import javax.swing.border.EmptyBorder; impor">
+<meta name="twitter:title" content="获取网页源代码，保存图片">
+<meta name="twitter:description" content="package WORK; import java.awt.BorderLayout; import java.awt.EventQueue; import java.awt.FileDialog; import javax.swing.JFrame; import javax.swing.JPanel; import javax.swing.border.EmptyBorder; import">
 
 
 
@@ -138,7 +138,7 @@
 
 
 
-  <title>Frist | 南岸青栀</title>
+  <title>获取网页源代码，保存图片 | 南岸青栀</title>
   
 
 
@@ -274,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Frist</h1>
+          <h1 class="post-title" itemprop="name headline">获取网页源代码，保存图片</h1>
         
 
         <div class="post-meta">
@@ -322,11 +322,9 @@
 
       
         <pre><code>package WORK;
-
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.FileDialog;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -354,7 +352,8 @@ public class URLConnecton_test extends JFrame {
 /**
  * Launch the application.
  */
-public static void main(String[] args) {
+</code></pre><a id="more"></a>
+<pre><code>public static void main(String[] args) {
     EventQueue.invokeLater(new Runnable() {
         public void run() {
             try {
@@ -458,9 +457,10 @@ public URLConnecton_test() {
     btnNewButton_1.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
             try{
-                URL url=new URL(&quot;http://news.swust.edu.cn/_upload/article/images/f4/de/6b50cda949628c38dbdfa8e52978/ccaf5f06-21be-4928-a25c-75053335433e.jpg&quot;);
+                URL url=new URL(&quot;输入图片网址&quot;);
                 try{
                     InputStream is = url.openStream();
+                    //保存在D盘，名为pic8
                     File out = new File(&quot;d:\\pic8.jpg&quot;);
                     FileOutputStream fos = new FileOutputStream(out);
                     byte[] buff = new byte[1024];
@@ -517,7 +517,7 @@ public URLConnecton_test() {
       
         <div class="post-tags">
           
-            <a href="/tags/java-爬虫代码/" rel="tag"># -java -爬虫代码</a>
+            <a href="/tags/java/" rel="tag"># -java</a>
           
         </div>
       
@@ -615,7 +615,7 @@ public URLConnecton_test() {
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -815,6 +815,6 @@ public URLConnecton_test() {
 
   
 
-  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32957012&auto=1&height=66"></iframe>
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=0 height=0 src="//music.163.com/outchain/player?type=2&id=32957012&auto=1&height=66"></iframe>
 </body>
 </html>

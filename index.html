@@ -273,7 +273,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/25/Frist/" itemprop="url">Frist</a></h1>
+                <a class="post-title-link" href="/2017/07/25/Frist/" itemprop="url">获取网页源代码，保存图片</a></h1>
         
 
         <div class="post-meta">
@@ -321,13 +321,10 @@
 
       
         
-          
-            <pre><code>package WORK;
-
+          <pre><code>package WORK;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.FileDialog;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -355,142 +352,14 @@ public class URLConnecton_test extends JFrame {
 /**
  * Launch the application.
  */
-public static void main(String[] args) {
-    EventQueue.invokeLater(new Runnable() {
-        public void run() {
-            try {
-                URLConnecton_test frame = new URLConnecton_test();
-                frame.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    });
-}
-
-/**
- * Create the frame.
- */
-public URLConnecton_test() {
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setBounds(100, 100, 1031, 581);
-    contentPane = new JPanel();
-    contentPane.setBackground(Color.WHITE);
-    contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-    setContentPane(contentPane);
-    contentPane.setLayout(null);
-
-    JScrollPane scrollPane = new JScrollPane();
-    scrollPane.setBounds(0, 0, 1013, 534);
-    contentPane.add(scrollPane);
-
-    JMenuBar menuBar = new JMenuBar();
-    scrollPane.setColumnHeaderView(menuBar);
-
-    JLabel lblNewLabel = new JLabel(&quot;URL:&quot;);
-    lblNewLabel.setFont(new Font(&quot;宋体&quot;, Font.PLAIN, 18));
-    lblNewLabel.setBackground(Color.WHITE);
-    menuBar.add(lblNewLabel);
-
-    JTextArea text_url = new JTextArea();
-    text_url.setFont(new Font(&quot;Monospaced&quot;, Font.PLAIN, 18));
-    text_url.setBackground(Color.WHITE);
-    menuBar.add(text_url);
-
-    JButton btnNewButton = new JButton(&quot;\u83B7\u53D6\u6E90\u7801&quot;);
-    btnNewButton.setFont(new Font(&quot;宋体&quot;, Font.PLAIN, 18));
-    btnNewButton.setBackground(Color.WHITE);
-    btnNewButton.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-            txt.setText(null);
-            try {
-                URL url = new URL(text_url.getText());
-                try{
-                InputStream is =url.openStream();
-                InputStreamReader isr = new InputStreamReader(is,&quot;UTF-8&quot;);
-                BufferedReader bf = new BufferedReader(isr);
-                String s=bf.readLine();
-                while(s!=null)
-                {
-                    txt.append(s+&quot;\n&quot;);
-                    s=bf.readLine();
-                }
-                bf.close();
-                isr.close();
-                is.close();
-                }
-            catch (IOException e1) {
-            } 
-            }catch (MalformedURLException e2) {
-            }
-
-        }
-    });
-    menuBar.add(btnNewButton);
-
-    JButton button = new JButton(&quot;\u4FDD\u5B58\u6587\u4EF6&quot;);
-    button.setFont(new Font(&quot;宋体&quot;, Font.PLAIN, 18));
-    button.setBackground(Color.WHITE);
-    button.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-            try{
-                JFrame jf = new JFrame();
-                FileDialog fd = new FileDialog(jf,&quot;保存&quot;,FileDialog.SAVE);
-                fd.setVisible(true);
-                String filepath = fd.getDirectory();
-                String filename = fd.getFile();
-                try{
-                    FileOutputStream fos = new FileOutputStream(filepath+filename);
-                    String s;
-                    s=txt.getText();
-                    fos.write(s.getBytes());
-                    fos.close();
-                }catch (Exception ex) {
-                }
-            }catch (Exception ex) {
-            }
-
-        }
-    });
-    menuBar.add(button);
-
-    JButton btnNewButton_1 = new JButton(&quot;\u83B7\u53D6\u56FE\u7247&quot;);
-    btnNewButton_1.setFont(new Font(&quot;宋体&quot;, Font.PLAIN, 18));
-    btnNewButton_1.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-            try{
-                URL url=new URL(&quot;http://news.swust.edu.cn/_upload/article/images/f4/de/6b50cda949628c38dbdfa8e52978/ccaf5f06-21be-4928-a25c-75053335433e.jpg&quot;);
-                try{
-                    InputStream is = url.openStream();
-                    File out = new File(&quot;d:\\pic8.jpg&quot;);
-                    FileOutputStream fos = new FileOutputStream(out);
-                    byte[] buff = new byte[1024];
-                    int n = is.read(buff);
-                    while(n!=-1)
-                    {
-                        fos.write(buff,0,n);
-                        n = is.read(buff);
-                    }
-                    fos.close();
-                    is.close();
-                }
-                catch(IOException ex1){
-                }
-            }
-            catch(Exception ex){
-            }
-
-        }
-    });
-    btnNewButton_1.setBackground(Color.WHITE);
-    menuBar.add(btnNewButton_1);
-
-    txt = new TextArea();
-    scrollPane.setViewportView(txt);
-}
-}
 </code></pre>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/25/Frist/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -702,7 +571,7 @@ public URLConnecton_test() {
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -902,6 +771,6 @@ public URLConnecton_test() {
 
   
 
-  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32957012&auto=1&height=66"></iframe>
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=0 height=0 src="//music.163.com/outchain/player?type=2&id=32957012&auto=1&height=66"></iframe>
 </body>
 </html>
