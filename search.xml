@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Android开发集训第一天]]></title>
-    <url>%2F2018%2F01%2F04%2F%E6%9A%91%E5%81%87%E9%9B%86%E8%AE%ADAndroid1%2F</url>
-    <content type="text"><![CDATA[上午老师也没有讲什么好东西，无非就是给我们吹吹牛，讲讲Android的历史，讲了Android的基本框架（那个东西算作是框架吧）由底层向用户一一介绍，然后讲了一堆没用的东西balabala，后面老师用Android studio 一步一步的讲解，虽然大致内容我都是知道的，然后开始了第一个代码helloworld，然后就下课了 下午介绍TextView以及Android studio 左边工具区 &lt;TextView android:id=&quot;@+id/textview1&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;@string/app_name&quot; android:textColor=&quot;@color/red&quot; /&gt; 然后讲解了RGB（虽然感觉没用），然后利用res/values/strings.xml与TextView相匹配，主要讲解了TextView中的autoLink none 0x00 web 0x01 email 0x02 phone 0x04 map 0x08 all 0x0f eg：在布局res/中定义，只需要tv.setText(“www.baidu.com”);如果不在 布局 res/中定义，则需要在java/中调用setAutoLinkMsak（）方法 tv = (TextView) super.findViewById(R.id.textview1); tv.setAutoLinkMask(Linkify.ALL); tv.setText(&quot;www.baidu.com&quot;);]]></content>
+    <title></title>
+    <url>%2F2017%2F08%2F31%2F%E6%9A%91%E5%81%87%E9%9B%86%E8%AE%ADAndroid1%2F</url>
+    <content type="text"><![CDATA[title: Android开发集训第一天date: 2018-1-4 上午老师也没有讲什么好东西，无非就是给我们吹吹牛，讲讲Android的历史，讲了Android的基本框架（那个东西算作是框架吧）由底层向用户一一介绍，然后讲了一堆没用的东西balabala，后面老师用Android studio 一步一步的讲解，虽然大致内容我都是知道的，然后开始了第一个代码helloworld，然后就下课了 下午介绍TextView以及Android studio 左边工具区 &lt;TextView android:id=&quot;@+id/textview1&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;@string/app_name&quot; android:textColor=&quot;@color/red&quot; /&gt; 然后讲解了RGB（虽然感觉没用），然后利用res/values/strings.xml与TextView相匹配，主要讲解了TextView中的autoLink none 0x00 web 0x01 email 0x02 phone 0x04 map 0x08 all 0x0f eg：在布局res/中定义，只需要tv.setText(“www.baidu.com”);如果不在 布局 res/中定义，则需要在java/中调用setAutoLinkMsak（）方法 tv = (TextView) super.findViewById(R.id.textview1); tv.setAutoLinkMask(Linkify.ALL); tv.setText(&quot;www.baidu.com&quot;);]]></content>
   </entry>
   <entry>
     <title><![CDATA[一时语塞]]></title>
