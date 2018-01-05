@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Android集训第二天]]></title>
+    <url>%2F2018%2F01%2F05%2FAndroid%E9%9B%86%E8%AE%AD%E7%AC%AC%E4%BA%8C%E5%A4%A9%2F</url>
+    <content type="text"><![CDATA[上午android:password 用于隐藏其文本(目前所了解到) android:maxLength 正如其字面意思，最大长度，超出部分不显示 android:autoLink 自我感觉这个东西很有用，不用向系统申请权限就直接打开网址等等 在面对很多相同属性的控件的时候我们可以选择样式style，把重复的属性抽象出来，在style.xml里面定义style格式如下: all false 20 @color/red …… …… 然后在你所需要这个style的控件里面添加style=”@style/custom”这个属性，其中custom是你自己定义的style文件名 最简单的事件处理方式 bt1.setOnClickListener(new View.OnClickListener() { @Override public void onClick(View v) { tv.setText(R.string.second); ........ ........ } }); ImaginButton 下午]]></content>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Android集训第一天]]></title>
+    <url>%2F2018%2F01%2F04%2FAndroid%E9%9B%86%E8%AE%AD%E7%AC%AC%E4%B8%80%E5%A4%A9%2F</url>
+    <content type="text"><![CDATA[上午老师也没有讲什么好东西，无非就是给我们吹吹牛，讲讲Android的历史，讲了Android的基本框架（那个东西算作是框架吧）由底层向用户一一介绍，然后讲了一堆没用的东西balabala，后面老师用Android studio一步一步的讲解，虽然大致内容我都是知道的，然后开始了第一个代码helloworld，然后就下课了 下午介绍TextView以及Android studio 左边工具区 &lt;TextView android:id=&quot;@+id/textview1&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; android:text=&quot;@string/app_name&quot; android:textColor=&quot;@color/red&quot; /&gt; 然后讲解了RGB（虽然感觉没用），然后利用res/values/strings.xml与TextView相匹配，主要讲解了TextView中的autoLink none 0x00 web 0x01 email 0x02 phone 0x04 map 0x08 all 0x0f eg：在布局res/中定义，只需要tv.setText(“www.baidu.com”);如果不在 布局 res/中定义，则需要在java/中调用setAutoLinkMsak（）方法 tv = (TextView) super.findViewById(R.id.textview1); tv.setAutoLinkMask(Linkify.ALL); tv.setText(&quot;www.baidu.com&quot;);]]></content>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一时语塞]]></title>
     <url>%2F2017%2F07%2F25%2FFrist%2F</url>
     <content type="text"><![CDATA[第一天听从学长的建议，第一次搞了这个博客，后来想虽然没什么可写的但是不把这件事情做完有点可惜然后弄了一下午，晚上弄到大概2点左右，总是部署不上去，后面放弃了，就sleep了，好困(:з」∠) 第二天百度查了很多方法，花了一上午还是没有部署到线上，我绝望了，还是继续百度，最后发现以前那种部署方法都是2.0的版本，然后呢从官网上下下来的最新版本是3.0系列，3.0的部署需要下面这种： deploy: type: git repository: git@github.com:yourname/yourname.github.io.git branch: master 真是气死人了然后又上网看了看优化，加了背景音乐，一些杂七杂八东西，emmm……现在大概就是这样，我看了下，好像加了歌曲（网易云外链）加载速度会很慢，然后这个主题呢，好像手机端的美化不是那么好看，也不在意啦，反正能用就好了。。。然后发现图片加载速度很慢。。。没钱搞那个什么CDN，还不如买点吃的犒劳下自己，哈哈哈，就这样 正在慢慢的完善中……反正目前没什么东西，以后八成也不会有什么东西，不想看的话右上角 X 慢走不送]]></content>
