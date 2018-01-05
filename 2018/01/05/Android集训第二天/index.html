@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Dancer">
 <meta property="og:description" content="上午android:password   用于隐藏其文本(目前所了解到) android:maxLength  正如其字面意思，最大长度，超出部分不显示 android:autoLink   自我感觉这个东西很有用，不用向系统申请权限就直接打开网址等等 在面对很多相同属性的控件的时候我们可以选择样式style，把重复的属性抽象出来，在style.xml里面定义style格式如下:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-05T05:26:06.992Z">
+<meta property="og:updated_time" content="2018-01-05T12:26:13.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android集训第二天">
 <meta name="twitter:description" content="上午android:password   用于隐藏其文本(目前所了解到) android:maxLength  正如其字面意思，最大长度，超出部分不显示 android:autoLink   自我感觉这个东西很有用，不用向系统申请权限就直接打开网址等等 在面对很多相同属性的控件的时候我们可以选择样式style，把重复的属性抽象出来，在style.xml里面定义style格式如下:">
@@ -330,12 +330,11 @@
       
 
       
-        <h5 id="上午"><a href="#上午" class="headerlink" title="上午"></a><strong>上午<br></strong></h5><pre><code>android:password   用于隐藏其文本(目前所了解到)
+        <h5 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午<br></h5><pre><code>android:password   用于隐藏其文本(目前所了解到)
 android:maxLength  正如其字面意思，最大长度，超出部分不显示
 android:autoLink   自我感觉这个东西很有用，不用向系统申请权限就直接打开网址等等
 </code></pre><p>在面对很多相同属性的控件的时候我们可以选择样式style，把重复的属性抽象出来，在style.xml里面定义style<br>格式如下:<br><a id="more"></a><br>    <style name="custom"><br>            <item name="android:autoLink">all</item><br>            <item name="android:password">false</item><br>            <item name="android:maxLength">20</item><br>            <item name="android:textColor">@color/red</item><br>            ……<br>            ……<br>    </style></p>
-<p>然后在你所需要这个style的控件里面添加style=”@style/custom”这个属性，其中custom是你自己定义的style文件名</p>
-<p>最简单的事件处理方式</p>
+<p>然后在你所需要这个style的控件里面添加style=”@style/custom”这个属性，其中custom是你自己定义的style文件名<br><br>最简单的事件处理方式</p>
 <pre><code>bt1.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
@@ -344,8 +343,118 @@ android:autoLink   自我感觉这个东西很有用，不用向系统申请权�
         ........
         }
     });
-</code></pre><p>ImaginButton<br></p>
-<h5 id="下午"><a href="#下午" class="headerlink" title="下午"></a><strong>下午<br></strong></h5>
+</code></pre><p><strong>ImageButton</strong>（用代码说清楚点）<br><br>这是ImageButton的xml </p>
+<pre><code>&lt;ImageButton
+        android:id=&quot;@+id/image_bt1&quot;
+           android:layout_width=&quot;wrap_content&quot;
+           android:layout_height=&quot;wrap_content&quot;
+           android:background=&quot;@drawable/button_state&quot;/&gt;
+</code></pre><p>然后我们在res/drawable，右键new/Drawable resource files，编译器会自动给你匹配selector<br>你只需要填写名称即可，如果没有出现就新建一个file然后自己找selector这个得到<br>    &lt;?xml version=”1.0” encoding=”utf-8”?&gt;<br>    <selector xmlns:android="http://schemas.android.com/apk/res/android"><br>        <item android:state_pressed="false" android:drawable="@drawable/image2"><br>        <item android:state_pressed="true" android:drawable="@drawable/image3"><br>    </item></item></selector><br>中间两行代码是自己敲的，用于点击图片前后图片发生变化，然后与上面的<strong>@drawable/button_state</strong>对应</p>
+<h5 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午<br></h5><p><strong>CheckBox</strong> 允许多选<br><br>RadioButton只能单选，但要和RadioGroup一起使用<br><br>示例：</p>
+<pre><code>&lt;CheckBox
+        android:id=&quot;@+id/cb&quot;
+        android:text=&quot;成都&quot;
+           android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot; /&gt;
+    &lt;CheckBox
+        android:id=&quot;@+id/cb1&quot;
+        android:text=&quot;绵阳&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot; /&gt;
+</code></pre><p>这里允许选择成都和绵阳一同选择</p>
+<pre><code>&lt;RadioGroup
+       android:id=&quot;@+id/rg&quot;
+    android:layout_width=&quot;wrap_content&quot;
+    android:layout_height=&quot;wrap_content&quot;&gt;
+    &lt;RadioButton
+           android:id=&quot;@+id/rb_man&quot;
+           android:text=&quot;man&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot; /&gt;
+    &lt;RadioButton
+            android:id=&quot;@+id/rg_woman&quot;
+            android:text=&quot;woman&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot; /&gt;
+    &lt;RadioButton
+            android:id=&quot;@+id/rg_animal&quot;
+            android:text=&quot;animal&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot; /&gt;
+            ..........
+            ..........
+            ..........
+            ..........
+&lt;/RadioGroup&gt;
+</code></pre><p>这里只允许单选（man，woman，animal…….中其中之一）<br><br>但是我们怎么知道用户在RadioGroup选择了啥？   <br><br>这就需要一个RadioGroup.OnCheckedChangeListener()方法,然后匹配xml里面的id<br><br>示例：</p>
+<pre><code>radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            switch (checkedId){
+                case R.id.rb_man:textView.setText(&quot;man is cheaked&quot;);break;
+                case R.id.rg_woman:textView.setText(&quot;woman is cheaked&quot;);break;
+                default:textView.setText(&quot;Nothing&quot;);break;
+            }
+        }
+    });
+</code></pre><p>配置列表项<br><br><em>1、直接通过资源文件配置</em><br><br>定义一个values/city_labels.xml文件，用<string-array>元素指定，定义内容如下<br><br>示例：</string-array></p>
+<pre><code>&lt;string-array name=&quot;city_labels&quot;&gt;
+    &lt;item&gt;成都&lt;/item&gt;
+    &lt;item&gt;绵阳&lt;/item&gt;
+    &lt;item&gt;南充&lt;/item&gt;
+&lt;/string-array&gt;
+</code></pre><p>然后在Spinner这个控件(下拉列表框)直接使用<br><br>android:entries=”@array/city_labels”<br><br>2、通过ArrayAdapeter类实现<br><br>讲了三种方法<br></p>
+<pre><code>public ArrayAdapter(Context context,int textViewResourceId,List&lt;T&gt; objects)
+public ArrayAdapter(Context context,int textViewResourceId,List&lt;T&gt; objects)
+public static ArrayAdapter&lt;CharSequence&gt;createFromResource(Context context,int textArrayResId,int textViewResourceId)
+</code></pre><p>通过示例来学习（以下是一些主要代码）<br><br>首先定义<br></p>
+<pre><code>private ArrayAdapter&lt;String&gt; adapter;
+private List&lt;String&gt; color_data;
+
+color_data = new ArrayList&lt;String&gt;();
+color_data.add(&quot;red&quot;);
+color_data.add(&quot;blue&quot;);
+color_data.add(&quot;green&quot;);
+adapter = new ArrayAdapter&lt;String&gt;(this, android.R.layout.simple_spinner_dropdown_item, color_data);
+spinner.setAdapter(adapter);
+</code></pre><p>华丽的分隔符—————————————————————————————————————————————————————–</p>
+<pre><code>直接在java中写
+private ArrayAdapter&lt;String&gt; adapter_edu;    
+private String[] arry_edu = {&quot;小学&quot;, &quot;初中&quot;, &quot;高中&quot;, &quot;大学&quot;};
+
+
+adapter_edu = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, arry_edu);
+spinner.setAdapter(adapter_edu);
+</code></pre><p>华丽的分隔符—————————————————————————————————————————————————————–</p>
+<pre><code>先在values/strings.xml里面用&lt;string-array&gt;元素指定animal
+ &lt;resources&gt;
+    &lt;string name=&quot;app_name&quot;&gt;MySpinnerDemo&lt;/string&gt;
+    &lt;string-array name=&quot;animal&quot;&gt;
+        &lt;item&gt;cat&lt;/item&gt;
+        &lt;item&gt;dog&lt;/item&gt;
+        &lt;item&gt;pig&lt;/item&gt;
+    &lt;/string-array&gt;
+&lt;/resources&gt;
+然后在在java里面写
+adapter_animal = ArrayAdapter.createFromResource(this, R.array.animal, android.R.layout.simple_spinner_dropdown_item);
+spinner.setAdapter(adapter_animal);
+</code></pre><hr>
+<p>了解到Spinner这个控件是用AdapterView.OnItemSelectedListener()这个来实现监听</p>
+<pre><code>spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+    @Override
+    public void onItemSelected(AdapterView&lt;?&gt; parent, View view, int position, long id) {
+        //  if(position == 0){
+                textView.setText(position+&quot;点击&quot;);
+        // }
+                   .........
+        }
+    @Override
+    public void onNothingSelected(AdapterView&lt;?&gt; parent) {
+            textView.setText(&quot;Nothing&quot;);
+        }
+    });
+</code></pre><p>下面的onNothingSelected没用过，不知道是什么玩意，百度上的解释是这样的：当我们的adapter为空的时候就会调用到这个方法</p>
+
       
     </div>
     
