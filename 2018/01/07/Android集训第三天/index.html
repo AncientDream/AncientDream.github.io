@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -94,17 +94,18 @@
 
 
 
-<meta name="description" content="Hello World. 据说这是惯例 哈哈哈，我只是个萌新，不是大佬">
+<meta name="description" content="上午界面布局学会LinearLayout（线性布局）最常用每一个LinearLayout里面又可分为垂直布局（android:orientation=”vertical”）和水平布局（android:orientation=”horizontal” ）。当垂直布局时，每一行就只有一个元素，多个元素依次垂直往下；水平布局时，只有一行，每一个元素依次向右排列。 学会TableLayout（表格布局）每">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/07/21/hello-world/index.html">
+<meta property="og:title" content="Android集训第三天">
+<meta property="og:url" content="http://yoursite.com/2018/01/07/Android集训第三天/index.html">
 <meta property="og:site_name" content="Dancer">
-<meta property="og:description" content="Hello World. 据说这是惯例 哈哈哈，我只是个萌新，不是大佬">
+<meta property="og:description" content="上午界面布局学会LinearLayout（线性布局）最常用每一个LinearLayout里面又可分为垂直布局（android:orientation=”vertical”）和水平布局（android:orientation=”horizontal” ）。当垂直布局时，每一行就只有一个元素，多个元素依次垂直往下；水平布局时，只有一行，每一个元素依次向右排列。 学会TableLayout（表格布局）每">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-07T11:27:58.964Z">
+<meta property="og:updated_time" content="2018-01-07T04:47:04.215Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Hello World. 据说这是惯例 哈哈哈，我只是个萌新，不是大佬">
+<meta name="twitter:title" content="Android集训第三天">
+<meta name="twitter:description" content="上午界面布局学会LinearLayout（线性布局）最常用每一个LinearLayout里面又可分为垂直布局（android:orientation=”vertical”）和水平布局（android:orientation=”horizontal” ）。当垂直布局时，每一行就只有一个元素，多个元素依次垂直往下；水平布局时，只有一行，每一个元素依次向右排列。 学会TableLayout（表格布局）每">
 
 
 
@@ -133,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/21/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/07/Android集训第三天/"/>
 
 
 
 
 
-  <title>Hello World | Dancer</title>
+  <title>Android集训第三天 | Dancer</title>
   
 
 
@@ -262,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/21/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/07/Android集训第三天/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="L_M">
@@ -279,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Android集训第三天</h1>
         
 
         <div class="post-meta">
@@ -291,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T14:28:16+08:00">
-                2017-07-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-07T12:40:28+08:00">
+                2018-01-07
               </time>
             
 
@@ -329,9 +330,43 @@
       
 
       
-        <p>Hello World. 据说这是惯例</p>
-<p><strong>哈哈哈，我只是个萌新，不是大佬</strong></p>
-<hr>
+        <h5 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午<br></h5><p>界面布局<br><br>学会<strong>LinearLayout</strong>（线性布局）最常用<br><br>每一个LinearLayout里面又可分为垂直布局（android:orientation=”vertical”）和水平布局（android:orientation=”horizontal” ）。<br><br>当垂直布局时，每一行就只有一个元素，多个元素依次垂直往下；水平布局时，只有一行，每一个元素依次向右排列。</p>
+<p>学会<strong>TableLayout</strong>（表格布局）<br><br>每一个TableLayout里面有表格行TableRow，TableRow里面可以具体定义每一个元素。每个TableRow 都会定义<br>一个 row （事实上，你可以定义其它的子对象，这在下面会解释到）。TableLayout 容器不会显示row 、cloumns<br>或cell 的边框线。每个 row 拥有0个或多个的cell ；每个cell 拥有一个View 对象。表格由列和行组成许多的<br>单元格。表格允许单元格为空。<br></p>
+<pre><code>&lt;TableLayout
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;&gt;
+    &lt;TableRow&gt;
+        &lt;EditText
+            android:id=&quot;@+id/Edit_text1&quot;
+            android:layout_width=&quot;wrap_content&quot;
+                android:layout_height=&quot;wrap_content&quot;
+                android:hint=&quot;请输入检索关键字...&quot; /&gt;
+            &lt;Button
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:text=&quot;检索&quot; /&gt;
+            .........
+    &lt;/TableRow&gt;
+&lt;/TableLayout&gt;
+</code></pre><p>….省略号里面就是你要填写的代码</p>
+<p><strong>RelativeLayout</strong>（相对布局）一般不用代码直接敲，而是直接拖动控件，<br>相对布局可以理解为某一个元素为参照物，来定位的布局方式。</p>
+<pre><code>        android：layout_方向 = id  表示 在这个id对应的控件的方向上（上|下）
+        android：layout_align方向  = id 表示和这个控件的（上下左右）对齐
+        android： layout_to方向Of  = id 表示在这个控件的 左或者右
+eg:
+        android:layout_below=&quot;@id/la1&quot;/&gt;
+        将当前控件放置于id为la1 的控件下方。
+        android:layout_alignParentRight=&quot;true&quot;
+        使当前控件的右端和父控件的右端对齐。这里属性值只能为true或false，默认false。
+        android:layout_marginLeft=&quot;10dip&quot;
+        使当前控件左边空出相应的空间。
+        android:layout_toLeftOf=&quot;@id/true&quot;
+        使当前控件置于id为true的控件的左边。
+        android:layout_alignTop=&quot;@id/ok&quot;
+        使当前控件与id为ok的控件上端对齐。
+</code></pre><p><strong>AbsoluteLayout</strong>，绝对布局，现在基本不用了<br><br><strong>FrameLayout</strong>，帧布局<br><br>FrameLayout是五大布局中最简单的一个布局，可以说成是层布局方式。在这个布局中，整个界面被当<br>成一块空白备用区域，所有的子元素都不能被指定放置的位置，它们统统放于这块区域的左上角，并且<br>后面的子元素直接覆盖在前面的子元素之上，将前面的子元素部分和全部遮挡。如下，第一个TextView<br>被第二个TextView完全遮挡，第三个TextView遮挡了第二个TextView的部分位置。</p>
+<h5 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午<br></h5><p>下午没有讲到什么，就是一些基本控件的反复利用，初步谈了下权限<br>监听键盘，和监听鼠标差不多；监听触摸屏幕，让我们做了个小Demo，加减乘除的计算器<br>如何获取其EditView里面的文件，其实就是一个getTet（）的方法，<br>获取出来的是一个String类型的东西。</p>
 
       
     </div>
@@ -347,6 +382,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+          
+        </div>
+      
 
       
       
@@ -356,15 +397,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/01/05/Android集训第二天/" rel="next" title="Android集训第二天">
+                <i class="fa fa-chevron-left"></i> Android集训第二天
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/25/Frist/" rel="prev" title="一时语塞">
-                一时语塞 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -416,8 +457,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -490,6 +540,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#上午"><span class="nav-number">1.</span> <span class="nav-text">上午</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#下午"><span class="nav-number">2.</span> <span class="nav-text">下午</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
