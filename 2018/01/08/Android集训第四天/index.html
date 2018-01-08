@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="上午android:password   用于隐藏其文本(目前所了解到) android:maxLength  正如其字面意思，最大长度，超出部分不显示 android:autoLink   自我感觉这个东西很有用，不用向系统申请权限就直接打开网址等等 在面对很多相同属性的控件的时候我们可以选择样式style，把重复的属性抽象出来，在style.xml里面定义style">
+<meta name="description" content="上午ProgressBar和SeekBar，这两个都比较简单，无非就是给用户一个显示信息，程序需要好多时间Progress经常与线程的东西一起实现">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android集训第二天">
-<meta property="og:url" content="http://yoursite.com/2018/01/05/Android集训第二天/index.html">
+<meta property="og:title" content="Android集训第四天">
+<meta property="og:url" content="http://yoursite.com/2018/01/08/Android集训第四天/index.html">
 <meta property="og:site_name" content="LinMin&#39;s Blog">
-<meta property="og:description" content="上午android:password   用于隐藏其文本(目前所了解到) android:maxLength  正如其字面意思，最大长度，超出部分不显示 android:autoLink   自我感觉这个东西很有用，不用向系统申请权限就直接打开网址等等 在面对很多相同属性的控件的时候我们可以选择样式style，把重复的属性抽象出来，在style.xml里面定义style">
+<meta property="og:description" content="上午ProgressBar和SeekBar，这两个都比较简单，无非就是给用户一个显示信息，程序需要好多时间Progress经常与线程的东西一起实现">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-05T12:47:47.121Z">
+<meta property="og:updated_time" content="2018-01-08T10:21:41.963Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android集训第二天">
-<meta name="twitter:description" content="上午android:password   用于隐藏其文本(目前所了解到) android:maxLength  正如其字面意思，最大长度，超出部分不显示 android:autoLink   自我感觉这个东西很有用，不用向系统申请权限就直接打开网址等等 在面对很多相同属性的控件的时候我们可以选择样式style，把重复的属性抽象出来，在style.xml里面定义style">
+<meta name="twitter:title" content="Android集训第四天">
+<meta name="twitter:description" content="上午ProgressBar和SeekBar，这两个都比较简单，无非就是给用户一个显示信息，程序需要好多时间Progress经常与线程的东西一起实现">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/05/Android集训第二天/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/08/Android集训第四天/"/>
 
 
 
 
 
-  <title>Android集训第二天 | LinMin's Blog</title>
+  <title>Android集训第四天 | LinMin's Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/Android集训第二天/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/Android集训第四天/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="L_M">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Android集训第二天</h1>
+          <h1 class="post-title" itemprop="name headline">Android集训第四天</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T13:25:14+08:00">
-                2018-01-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-08T18:20:58+08:00">
+                2018-01-08
               </time>
             
 
@@ -330,148 +330,89 @@
       
 
       
-        <h5 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午<br></h5><pre><code>android:password   用于隐藏其文本(目前所了解到)
-android:maxLength  正如其字面意思，最大长度，超出部分不显示
-android:autoLink   自我感觉这个东西很有用，不用向系统申请权限就直接打开网址等等
-</code></pre><p>在面对很多相同属性的控件的时候我们可以选择样式style，把重复的属性抽象出来，在style.xml里面定义style<br><a id="more"></a><br>格式如下:</p>
-<pre><code>&lt;style name=&quot;custom&quot;&gt;                                 
-        &lt;item name=&quot;android:autoLink&quot;&gt;all&lt;/item&gt;
-        &lt;item name=&quot;android:password&quot;&gt;false&lt;/item&gt;
-        &lt;item name=&quot;android:maxLength&quot;&gt;20&lt;/item&gt;
-        &lt;item name=&quot;android:textColor&quot;&gt;@color/red&lt;/item&gt;
-        ......
-        ......
-&lt;/style&gt;
-</code></pre><p>然后在你所需要这个style的控件里面添加style=”@style/custom”这个属性，其中custom是你自己定义的style文件名<br><br>最简单的事件处理方式</p>
-<pre><code>bt1.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        tv.setText(R.string.second);
-        ........
-        ........
-        }
-    });
-</code></pre><p><strong>ImageButton</strong>（用代码说清楚点）<br><br>这是ImageButton的xml<br></p>
-<pre><code>&lt;ImageButton
-        android:id=&quot;@+id/image_bt1&quot;
-           android:layout_width=&quot;wrap_content&quot;
-           android:layout_height=&quot;wrap_content&quot;
-           android:background=&quot;@drawable/button_state&quot;/&gt;
-</code></pre><p>然后我们在res/drawable，右键new/Drawable resource files，编译器会自动给你匹配selector<br>你只需要填写名称即可，如果没有出现就新建一个file然后自己找selector这个得到<br></p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
-    &lt;item android:state_pressed=&quot;false&quot; android:drawable=&quot;@drawable/image2&quot;/&gt;
-    &lt;item android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/image3&quot;/&gt;
-&lt;/selector&gt;
-</code></pre><p>中间两行代码是自己敲的，用于点击图片前后图片发生变化，然后与上面的<strong>@drawable/button_state</strong>对应</p>
-<h5 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午<br></h5><p><strong>CheckBox</strong> 允许多选<br><br>RadioButton只能单选，但要和RadioGroup一起使用<br><br>示例：</p>
-<pre><code>&lt;CheckBox
-        android:id=&quot;@+id/cb&quot;
-        android:text=&quot;成都&quot;
-           android:layout_width=&quot;wrap_content&quot;
-        android:layout_height=&quot;wrap_content&quot; /&gt;
-    &lt;CheckBox
-        android:id=&quot;@+id/cb1&quot;
-        android:text=&quot;绵阳&quot;
-        android:layout_width=&quot;wrap_content&quot;
-        android:layout_height=&quot;wrap_content&quot; /&gt;
-</code></pre><p>这里允许选择成都和绵阳一同选择</p>
-<pre><code>&lt;RadioGroup
-       android:id=&quot;@+id/rg&quot;
-    android:layout_width=&quot;wrap_content&quot;
-    android:layout_height=&quot;wrap_content&quot;&gt;
-    &lt;RadioButton
-           android:id=&quot;@+id/rb_man&quot;
-           android:text=&quot;man&quot;
-            android:layout_width=&quot;wrap_content&quot;
-            android:layout_height=&quot;wrap_content&quot; /&gt;
-    &lt;RadioButton
-            android:id=&quot;@+id/rg_woman&quot;
-            android:text=&quot;woman&quot;
-            android:layout_width=&quot;wrap_content&quot;
-            android:layout_height=&quot;wrap_content&quot; /&gt;
-    &lt;RadioButton
-            android:id=&quot;@+id/rg_animal&quot;
-            android:text=&quot;animal&quot;
-            android:layout_width=&quot;wrap_content&quot;
-            android:layout_height=&quot;wrap_content&quot; /&gt;
-            ..........
-            ..........
-            ..........
-            ..........
-&lt;/RadioGroup&gt;
-</code></pre><p>这里只允许单选（man，woman，animal…….中其中之一）<br><br>但是我们怎么知道用户在RadioGroup选择了啥？   <br><br>这就需要一个RadioGroup.OnCheckedChangeListener()方法,然后匹配xml里面的id<br><br>示例：</p>
-<pre><code>radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        <h5 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午<br></h5><p>ProgressBar和SeekBar，这两个都比较简单，无非就是给用户一个显示信息，程序需要好多时间<br><br>Progress经常与线程的东西一起实现<br><br><a id="more"></a><br>示例：<br></p>
+<pre><code>progressBar = findViewById(R.id.progressBar);
+    new Thread(new Runnable() {
         @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-            switch (checkedId){
-                case R.id.rb_man:textView.setText(&quot;man is cheaked&quot;);break;
-                case R.id.rg_woman:textView.setText(&quot;woman is cheaked&quot;);break;
-                default:textView.setText(&quot;Nothing&quot;);break;
+        public void run() {
+            while(true){
+                progressBar.setProgress(progress);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                if((progress + 5) &lt; 100){
+                    progress += 5;
+                }else{
+                    progress = 0;
+                }
             }
         }
-    });
-</code></pre><p>配置列表项<br><br><em>1、直接通过资源文件配置</em><br><br>定义一个values/city_labels.xml文件，用<string-array>元素指定，定义内容如下<br><br>示例：</string-array></p>
-<pre><code>&lt;string-array name=&quot;city_labels&quot;&gt;
-    &lt;item&gt;成都&lt;/item&gt;
-    &lt;item&gt;绵阳&lt;/item&gt;
-    &lt;item&gt;南充&lt;/item&gt;
-&lt;/string-array&gt;
-</code></pre><p>然后在Spinner这个控件(下拉列表框)直接使用<br><br>android:entries=”@array/city_labels”<br><br>2、通过ArrayAdapeter类实现<br><br>讲了三种方法<br></p>
-<pre><code>public ArrayAdapter(Context context,int textViewResourceId,List&lt;T&gt; objects)
-public ArrayAdapter(Context context,int textViewResourceId,List&lt;T&gt; objects)
-public static ArrayAdapter&lt;CharSequence&gt;createFromResource
-    (Context context,int textArrayResId,int textViewResourceId)
-</code></pre><p>通过示例来学习（以下是一些主要代码）<br><br>首先定义<br></p>
-<pre><code>private ArrayAdapter&lt;String&gt; adapter;
-private List&lt;String&gt; color_data;
-
-color_data = new ArrayList&lt;String&gt;();
-color_data.add(&quot;red&quot;);
-color_data.add(&quot;blue&quot;);
-color_data.add(&quot;green&quot;);
-adapter = new ArrayAdapter&lt;String&gt;(this, android.R.layout.simple_spinner_dropdown_item, 
-color_data);
-spinner.setAdapter(adapter);
-</code></pre><p>华丽的分隔符—————————————————————————————————————————————————————–</p>
-<pre><code>直接在java中写
-private ArrayAdapter&lt;String&gt; adapter_edu;    
-private String[] arry_edu = {&quot;小学&quot;, &quot;初中&quot;, &quot;高中&quot;, &quot;大学&quot;};
-
-adapter_edu = new ArrayAdapter(this, android.R.layout.simple_spinner
-_dropdown_item, arry_edu);
-spinner.setAdapter(adapter_edu);
-</code></pre><p>华丽的分隔符—————————————————————————————————————————————————————–</p>
-<pre><code>先在values/strings.xml里面用&lt;string-array&gt;元素指定animal
- &lt;resources&gt;
-    &lt;string name=&quot;app_name&quot;&gt;MySpinnerDemo&lt;/string&gt;
-    &lt;string-array name=&quot;animal&quot;&gt;
-        &lt;item&gt;cat&lt;/item&gt;
-        &lt;item&gt;dog&lt;/item&gt;
-        &lt;item&gt;pig&lt;/item&gt;
-    &lt;/string-array&gt;
-&lt;/resources&gt;
-然后在在java里面写
-adapter_animal = ArrayAdapter.createFromResource(this, R.array.animal, 
-android.R.layout.simple_spinner_dropdown_item);
-spinner.setAdapter(adapter_animal);
-</code></pre><hr>
-<p>了解到Spinner这个控件是用AdapterView.OnItemSelectedListener()这个来实现监听</p>
-<pre><code>spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+    }).start();
+</code></pre><p>这里我新建了一个线程，同时改写其run方法，然后在运行start；<br><br>SeekBar拖动事件需要改写的方法就比较多<br></p>
+<pre><code>seekBar = findViewById(R.id.seekBar);
+seekBar.setMax(100);
+seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     @Override
-    public void onItemSelected(AdapterView&lt;?&gt; parent, View view, int position
-        , long id) {
-        //  if(position == 0){
-                textView.setText(position+&quot;点击&quot;);
-        // }
-                   .........
-        }
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        textView.append(&quot;Current Progress&quot;+String.valueOf(progress)+&quot;\n&quot;);
+    }
+
     @Override
-    public void onNothingSelected(AdapterView&lt;?&gt; parent) {
-            textView.setText(&quot;Nothing&quot;);
-        }
-    });
-</code></pre><p>下面的onNothingSelected没用过，不知道是什么玩意，百度上的解释是这样的：当我们的adapter为空的时候就会调用到这个方法</p>
+    public void onStartTrackingTouch(SeekBar seekBar) {
+        textView.append(&quot;Start Progress\n&quot;);
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+        textView.append(&quot;Stop Progress\n&quot;);
+    }
+});
+</code></pre><p>先定义SeekBar的最大长度,然后在调用setOnSeekBarChangeListener这个方法实现<br><br>设置一个基本对话框，没有按钮</p>
+<pre><code>Dialog dialog = new AlertDialog.Builder(this).setTitle(&quot;对话框&quot;)
+            .setMessage(&quot;显示提示信息&quot;)
+            .setIcon(R.drawable.ic_launcher_background)
+            .create();
+    dialog.show();
+}
+</code></pre><p>设置一个对话框，有按钮的<br><br>以下是一个示例：<br><br>我觉得用代码来理解很好理解<br></p>
+<pre><code>Dialog dialog = new AlertDialog.Builder(MainActivity.this)
+    .setTitle(&quot;确定要删除吗？&quot;)
+            .setMessage(&quot;您确定要删除这条消息吗？&quot;)
+            .setIcon(R.drawable.ic_launcher_background)
+            .setPositiveButton(&quot;确定&quot;, new DialogInterface.OnClickListener(){
+                      @Override
+                      public void onClick(DialogInterface dialog, int which) {
+
+                           }
+                }).setNeutralButton(&quot;查看详情&quot;, new DialogInterface.OnClickListener(){
+                        @Override
+                           public void onClick(DialogInterface dialog, int which) {       
+
+                             }
+                    }).setNegativeButton(&quot;取消&quot;, new DialogInterface.OnClickListener(){
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                    })
+                    .create();
+                    dialog.show();
+</code></pre><p>Toast显示信息的一种机制</p>
+<pre><code>Toast.makeText(MainActivity.this,&quot;hello&quot;,Toast.LENGTH_SHORT).show();
+</code></pre><h5 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午<br></h5><p>Activity<br>Intent开启第二个界面<br>首先在java里面新创建一个继承Activity的java文件，新的界面肯定要有新的布局，所以在layout里面新创建一个xml文件，<br>然后在新的java文件里面写入 </p>
+<pre><code>protected void onCreate(@Nullable Bundle savedInstanceState){
+    super.onCreate(savedInstanceState);
+    setContentView(新的布局的名字);
+</code></pre><p>然后他们就相匹配了（可以这样理解），然后看看AndroidMainifest里面有没有给新的activity注册<br>如果没有注册，就自己手动添加如下代码</p>
+<pre><code>&lt;activity android:name=&quot;这里是你的新创建的java文件名字&quot;&gt;
+
+    &lt;/activity&gt;
+</code></pre><p>这样大致就好了，最后在原来的java文件里面敲出如下代码</p>
+<pre><code>Intent it = new Intent(A,B.class);//A,B表示从A界面跳到B界面
+    startActivity(it);
+</code></pre><p>当然Intent的功能还不止这些，还可以传递数据<br><br>发送方用.putExtra(“key”,”你要发送的消息”);<br>key（可以这样理解，双方都已知，相当于秘钥，我们都知道就可以互相通信；如果接收方错了，就不能收到）<br>接收方用Intent it = getIntent();这个方法获取Intent，然后再用这个方法it.getStringExtra(“key”)<br>得到发送方所发送的东西</p>
 
       
     </div>
@@ -502,8 +443,8 @@ spinner.setAdapter(adapter_animal);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/04/Android集训第一天/" rel="next" title="Android集训第一天">
-                <i class="fa fa-chevron-left"></i> Android集训第一天
+              <a href="/2018/01/07/Android集训第三天/" rel="next" title="Android集训第三天">
+                <i class="fa fa-chevron-left"></i> Android集训第三天
               </a>
             
           </div>
@@ -511,10 +452,6 @@ spinner.setAdapter(adapter_animal);
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/07/Android集训第三天/" rel="prev" title="Android集训第三天">
-                Android集训第三天 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
